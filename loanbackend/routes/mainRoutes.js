@@ -1,0 +1,44 @@
+const express = require("express");
+const router = express.Router();
+
+const UserRoute = require("./userRoutes");
+const Borrowers = require("./borrowerRoutes");
+const LoanType = require("./loanTypes");
+const Wallet = require("./walletRoutes");
+const Transfer = require("./transferRoutes");
+const LoanAgreement = require("./loanAgreement");
+const LoanSettlement = require("./loanSettlement");
+const Loan = require("./loanRoutes");
+const ExpansesCategories = require("./expansesCategories");
+const Expanses = require("./expanseRoutes");
+const Roles = require("./rolesRoutes");
+const manageUsers = require("./mangeUser");
+const repayments = require("./repaymentRoutes");
+const Package = require("./packagesRoutes");
+const PaymentsRoute = require("./paymentsRoutes");
+const CurrencyRoute = require("./currencyRoutes");
+const PaymentMethodRoute = require("./paymentMethodRoutes");
+const LandersRoute = require("./landersRoutes");
+const LoanOffersRoutes = require("./LoanOffersRoutes");
+
+router.use("/user", UserRoute);
+router.use("/borrower", Borrowers);
+router.use("/loanType", LoanType);
+router.use("/Wallet", Wallet);
+router.use("/transfer", Transfer);
+router.use("/loanAgreement", LoanAgreement);
+router.use("/loanSettlement", LoanSettlement);
+router.use("/loan", Loan);
+router.use("/expansesCategories", ExpansesCategories);
+router.use("/expanses", Expanses);
+router.use("/role", Roles);
+router.use("/manageUser", manageUsers);
+router.use("/repayment", repayments);
+router.use("/packages", Package);
+router.use("/payments", PaymentsRoute);
+router.use("/currency", CurrencyRoute);
+router.use("/paymentMethod", PaymentMethodRoute);
+router.use("/landers", LandersRoute);
+router.use("/loanOffers", LoanOffersRoutes);
+
+module.exports = router;
